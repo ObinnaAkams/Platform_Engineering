@@ -1,0 +1,12 @@
+name: My First Automation
+on: [push] # The Trigger: Run every time I push code
+
+jobs:
+  check-battery: # The Job Name
+    runs-on: ubuntu-latest # The Environment: A fresh cloud server
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4 # Tells the cloud server to download your repo
+
+      - name: Send a Greeting
+        run: echo "Hello Obinna! Your Platform Engineering journey is officially automated."
